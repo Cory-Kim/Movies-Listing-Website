@@ -1,0 +1,59 @@
+#container {
+  display: grid;
+  width: 95vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 3rem;
+}
+
+#pContainer {
+  background-color: E0E0E0;
+  border: 1px solid white;
+  border-radius: 20px;
+  box-shadow: 6px 6px 6px rgb(29, 30, 31);
+  display: grid;
+  grid-template-rows: 2fr 0.2fr 0.7fr 0.2fr;
+  grid-template-areas:
+    "photo"
+    "title"
+    "summary"
+}
+
+#photo {
+  grid-area: photo;
+  width: 20vw;
+  min-height: 50vh;
+  overflow: hidden;
+}
+
+#title {
+  grid-area: title;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 4%;
+}
+
+#sum {
+  grid-area: summary;
+  min-height: 22vh;
+  overflow: hidden;
+}
+
+#pageNum {
+  display: grid;
+  align-items: center;
+}
+
+@media only screen and (max-width: 550px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #photo {
+    grid-area: photo;
+    width: 90vw;
+    height: 40vh;
+  }
+
+}
